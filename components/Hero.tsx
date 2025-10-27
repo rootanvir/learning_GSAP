@@ -3,6 +3,8 @@ import { useGSAP } from '@gsap/react';
 import React, { FC } from 'react';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/dist/SplitText';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger, SplitText);          
 
 
 
@@ -23,8 +25,17 @@ const Hero: FC<Props> = ({ }) => {
             ease: 'expo-out',
             stagger: .09
         });
+        gsap.timeline({
+            scrollTrigger:{
+                trigger:'#hero',
+                start  : 'top top',
+                end    :'bottom top',
+                scrub  :true,
+            }
+        }).to('.right-leaf',{y:200},0)
+          .to('.left-leaf',{y:-200},0)
 
-    },)
+    },[]);
     return (
         <section
             id="hero"
@@ -33,14 +44,14 @@ const Hero: FC<Props> = ({ }) => {
             <img
                 src="/images/hero-left-leaf.png"
                 alt="left-leaf"
-                className="absolute top-0 left-0 w-40 md:w-60 object-contain"
+                className="left-leaf absolute top-0 left-0 w-40 md:w-60 object-contain"
             />
 
 
             <img
                 src="/images/hero-right-leaf.png"
                 alt="right-leaf"
-                className="absolute bottom-0 right-0 w-40 md:w-60 object-contain"
+                className="right-leaf absolute bottom-0 right-0 w-40 md:w-60 object-contain"
             />
 
             <h1 className="title text-[80px] font-modern md:text-[140px] font-extrabold text-white tracking-widest mt-16">
