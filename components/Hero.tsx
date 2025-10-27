@@ -4,6 +4,8 @@ import React, { FC, useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/dist/SplitText';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import '../app/globals.css';
+
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 interface Props {}
@@ -91,18 +93,21 @@ const Hero: FC<Props> = ({ }) => {
             </h1>
 
             <div className="absolute bottom-10 left-10 md:left-20 z-10">
+                <p className='pb-4 '>
+                    Cool. Crisp. Classic.
+                </p>
                 <p className="subtitle font-modern text-yellow-100 text-2xl md:text-4xl font-light leading-tight">
                     Sip the Spirit <br /> of summer
                 </p>
             </div>
 
             <div className="absolute bottom-10 right-10 md:right-20 text-right z-10">
-                <p className="text-white font-mono md:text-lg">
-                    Lorem ipsum dolor sit, amet consectetur  adipisicing elit. <br />Repudiandae, sapiente debitis voluptatem voluptatibus <br /> voluptatum tempore.
+                <p className="font-serif  text-white font-mono md:text-lg">
+                    Lorem ipsum dolor sit, amet consectetur<br /> la adipisicing  elit.Repudiandae, sapiente <br />debitis voluptatem lontess voluptatum<br />- design to delight your sense
                 </p>
                 <a
                     href="#cocktails"
-                    className="mt-2 inline-block text-indigo-400 hover:text-indigo-300 transition-colors duration-200 font-medium"
+                    className="mt-2 inline-block text-white-400 hover:text-indigo-300 transition-colors duration-200 font-bold"
                 >
                     View Cocktails
                 </a>
