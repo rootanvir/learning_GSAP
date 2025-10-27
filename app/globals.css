@@ -35,3 +35,6 @@ body {
 .font-modern {
   font-family: 'ModernNergra', sans-serif;
 }
+.video video {
+  @apply w-full h-64 md:h-96 lg:h-[32rem] rounded-2xl shadow-xl object-cover;
+}
