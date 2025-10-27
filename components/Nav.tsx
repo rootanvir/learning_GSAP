@@ -19,7 +19,7 @@ const Nav: FC = () => {
       "nav",
       { backgroundColor: "transparent" },
       {
-        backgroundColor: "#ffffff",
+        backgroundColor: "#000000ff",
         backdropFilter: "blur(10px)",
         duration: 1,
         ease: "power1.inOut",

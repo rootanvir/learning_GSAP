@@ -21,7 +21,7 @@ const Hero: FC<Props> = ({ }) => {
             yPercent: 50,
             duration: 1,
             ease: 'expo-out',
-            stagger: 0.05
+            stagger: .09
         });
 
     },)
