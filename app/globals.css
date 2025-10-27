@@ -24,3 +24,14 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@font-face {
+  font-family: 'ModernNergra';
+  src: url('/fonts/ModernNegraDemo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-modern {
+  font-family: 'ModernNergra', sans-serif;
+}
